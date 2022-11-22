@@ -1,71 +1,45 @@
 package hooks;
 
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.specification.RequestSpecification;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
 
 public class Hooks {
-    @Before
-    public void setUp(){
+    /*
+   Cucumber'da step definitions package'i içerisinde
+@before @after gibi bir notasyon varsa
+extends testBase dememize gerek kalmadan
+her scenario'dan önce ve/veya sonra bu methodlar çalışacaktır
+
+Bu da bizim isteyeceğimiz bir durum değildir
+
+Cucumber'da @before @after kullanma ihtiyacımız olursa
+bunu stepDefinitions package'i altında oluşturacağımız
+Hooks class'ına koyarız
 
 
-    }
+Biz her scenario'dan sonra test sonucunu kontrol edip failed olan
+scenario'lar için screenshoot olmasi amaciyla
+@After methodu kullanacağız
 
-    //
-    public static RequestSpecification spec;
-//
-    @Before( value = "@DeleteUser")
-    public void setup(){
-
-        spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
-
-
-    }
-
-
-    @Before(order = 1, value = "@UIRegistration")
-    public void navigateToRegistrationPage(){
-
-        Driver.getDriver().get(ConfigReader.getProperty("medunna_registration_url"));
-
-    }
-
-//    @Before( value = "@DBUsers")
-//    public void createNewDBConnection(){
-//
-//        createConnection(ConfigurationReader.getProperty("db_credentials_url"),
-//                ConfigurationReader.getProperty("db_username"),
-//                ConfigurationReader.getProperty("db_password"));
-//
-//    }
-
-
-    @Before(order = 1, value = "@Appointment")
-    public void navigateToLandingPage(){
-
-        Driver.getDriver().get(ConfigReader.getProperty("medunna_registration_url"));
-
-    }
-
-
+     */
 
     @After
-    public void tearDown(Scenario scenario){
-
+    public void tearDown(Scenario scenario) throws IOException {
+        final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
         if (scenario.isFailed()) {
-            final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "/image/png","screenshots");
+            ReusableMethods.getScreenshot("test_failed");
 
-            scenario.attach(screenshot, "image/png","screenshots");
         }
-
-//        Driver.closeDriver();
+        if (Driver.getDriver() != null) {
+            Driver.closeDriver();
+        }
 
     }
 }
