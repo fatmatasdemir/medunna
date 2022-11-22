@@ -16,8 +16,44 @@ public class US05_06_07 {
         PageFactory.initElements(Driver.getDriver(), this);}
 
 
+
+    @FindBy (xpath="//*[text()='Your FirstName is required.']")
+    public static WebElement firstNameIsRequired;
+
+    @FindBy(xpath="//input[@name='ssn']")
+    public static WebElement SSN;
+    @FindBy(xpath="//*[text()='Your SSN is invalid']")
+    public static WebElement YourSSNIsInvalid;
+
+    @FindBy (xpath="//input[@name='lastName']")
+    public static WebElement LastName;
+
+    @FindBy (xpath="//input[@name='email']")
+    public static WebElement Email;
+
+    @FindBy (xpath="//input[@name='phone']")
+    public static WebElement PhoneNumber;
+
+    @FindBy (xpath="//*[text()='Send an Appointment Request']")
+    public static WebElement SendanAppointmentRequestButonu;
+
+    @FindBy (xpath="(//*[text()='My Appointments'])[1]")
+    public static WebElement MyAppointments;
+
+    @FindBy(xpath="//thead//tr[1]//th[1]")
+    public static WebElement id;
     @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
     public static WebElement accountMenuButton2;
+
+    @FindBy(xpath = "//span[normalize-space()='Sign in']")
+    public static WebElement signInButton;
+
+    @FindBy(xpath = "//button[@type='submit']//span[contains(text(),'Sign in')]")
+    public static WebElement signInButton2;
+    @FindBy(xpath = "//*[@id='entity-menu']")
+    public static WebElement myPages;
+
+
 
     @FindBy(xpath = "//*[@class='dropdown nav-item']")
     public static WebElement girisIkonu;
@@ -36,17 +72,6 @@ public class US05_06_07 {
     @FindBy(xpath = "//span[text()='MY PAGES(PATIENT)']")
     public WebElement myPagesPatient;
 
-
-
-
-    @FindBy(xpath = "//*[@class='appointment-btn scrollto']")
-    public static WebElement makeAnAppointmentButton;
-
-    @FindBy(xpath = "//span[text()='Make an Appointment']")
-    public WebElement makeAnAppointmentElement;
-
-    @FindBy(xpath = "//input[@name='firstName']")
-    public WebElement makeAnAppointmentUserName;
 
     @FindBy(xpath = "//span[text()='Send an Appointment Request']")
     public WebElement sendAnAppointmentRequest;
@@ -78,7 +103,7 @@ public class US05_06_07 {
     @FindBy(xpath = "//tbody//tr/td[6]")
     public List<WebElement> createdDateElements;
 
-    //span[text()='Settings']
+   // //span[text()='Settings']
 
     @FindBy(xpath = "  //*[@id=\"account-menu\"]/div/a[1]/span")
     public static WebElement settings;
@@ -95,11 +120,11 @@ public class US05_06_07 {
 
 
 
-    @FindBy(xpath = "(//a[@href='#'])[1]")
-    public WebElement dropDownIkonu;
+   // @FindBy(xpath = "(//a[@href='#'])[1]")
+   // public WebElement dropDownIkonu;
 
-    @FindBy(xpath = "//span[text()='Sign in']")
-    public WebElement signinElementi;
+  //  @FindBy(xpath = "//span[text()='Sign in']")
+   // public WebElement signinElementi;
 
     @FindBy(xpath = "//input[@name='username']")
     public WebElement usernameBox;
@@ -107,29 +132,27 @@ public class US05_06_07 {
     @FindBy(xpath = "//input[@name='password']")
     public WebElement passwordBox;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement signinButonu;
+    //@FindBy(xpath = "//button[@type='submit']")
+   // public WebElement signinButonu;
 
-    @FindBy(xpath = "//span[text()='MY PAGES(PATIENT)']")
-    public WebElement mypagesElementi;
+  //  @FindBy(xpath = "//span[text()='MY PAGES(PATIENT)']")
+   // public WebElement mypagesElementi;
 
     @FindBy(xpath = "//span[text()='Make an Appointment']")
     public static WebElement makeanAppointmentButonu;
 
-    @FindBy(xpath = "(//input[@id='phone'])[1]")
-    public WebElement phoneBox;
+
 
     @FindBy(xpath = "//input[@name='appoDate']")
     public static WebElement appointmentDateTimeBox;
 
-    @FindBy(xpath="//button[@type='submit']")
-    public WebElement appointmentRequestButonu;
+    //@FindBy(xpath="//button[@type='submit']")
+   // public WebElement appointmentRequestButonu;
 
-    @FindBy(xpath="//span[text()='Appointment date can not be past date!']")
-    public static WebElement pastDateTextElement;
 
-    @FindBy(xpath="//div[@style='pointer-events: none;']")
-    public WebElement randevuKabulTextElementi;
+
+   // @FindBy(xpath="//div[@style='pointer-events: none;']")
+   // public WebElement randevuKabulTextElementi;
 
     @FindBy(xpath="//span[text()='Administration']")
     public WebElement administrationElementi;
@@ -188,7 +211,7 @@ public class US05_06_07 {
     @FindBy(xpath="//option[@value='ROLE_PHYSICIAN']")
     public WebElement profilsRolePhysician;
 
-    //US06 LOCATELERI
+    //US05 VE US06  LOCETLERI
 
 
 
@@ -197,8 +220,7 @@ public class US05_06_07 {
 
 
 
-    @FindBy(xpath = "//span[normalize-space()='Sign in']")
-    public static WebElement signInButton;
+
 
     @FindBy(xpath = "//input[@id='username']")
     public static WebElement usernameTextBox;
@@ -206,8 +228,7 @@ public class US05_06_07 {
     @FindBy(xpath = "//input[@id='password']")
     public static WebElement passwordTextBox;
 
-    @FindBy(xpath = "//button[@type='submit']//span[contains(text(),'Sign in')]")
-    public static WebElement signInButton2;
+
 ;
 
 
@@ -236,11 +257,13 @@ public class US05_06_07 {
    @FindBy (xpath = "//li[@id='account-menu']")
     public static WebElement accountMenuButonu;
 
-    @FindBy(xpath = "//*[@id='entity-menu']")
-    public static WebElement myPages;
 
-    @FindBy(xpath = "//*[span='Make an Appointment']")
-    public static WebElement makeAppointment;
+
+
+   @FindBy(xpath = "//*[span='Make an Appointment']")
+   public static WebElement makeAppointment;
+
+
 
     @FindBy(xpath = "//input[@name='phone']")
     public static WebElement phone;
@@ -252,23 +275,15 @@ public class US05_06_07 {
     public static WebElement sendRequestButton;
 
      // US0707 LOCETLERI
-/*
-    @FindBy(xpath = "//input[@id='username']")
-    public static WebElement usernameTextBox;
 
-    @FindBy(xpath = "//input[@id='password']")
-    public static WebElement passwordTextBox;
- /*  @FindBy(xpath = "(//a[@href='#'])[1]")
+
+  @FindBy(xpath = "(//a[@href='#'])[1]")
      public static WebElement dropDownIkonu;
 
     @FindBy(xpath = "//span[text()='Sign in']")
     public static WebElement signinElementi;
 
-    @FindBy(xpath = "//input[@name='username']")
-    public static WebElement usernameBox;
 
-    @FindBy(xpath = "//input[@name='password']")
-    public static WebElement passwordBox;
 
     @FindBy(xpath = "//button[@type='submit']")
     public static WebElement signinButonu;
@@ -276,14 +291,16 @@ public class US05_06_07 {
     @FindBy(xpath = "//span[text()='MY PAGES(PATIENT)']")
     public static WebElement mypagesElementi;
 
-    @FindBy(xpath = "//span[text()='Make an Appointment']")
-    public static WebElement makeanAppointmentButonu;
+    @FindBy(xpath = "//*[@class='appointment-btn scrollto']")
+    public static WebElement makeAnAppointmentButton;
+
+    @FindBy(xpath = "//input[@name='firstName']")
+    public WebElement makeAnAppointmentUserName;
+
 
     @FindBy(xpath = "(//input[@id='phone'])[1]")
     public static WebElement phoneBox;
 
-    @FindBy(xpath = "//input[@name='appoDate']")
-    public static WebElement appointmentDateTimeBox;
 
     @FindBy(xpath="//button[@type='submit']")
     public static WebElement appointmentRequestButonu;
@@ -294,66 +311,10 @@ public class US05_06_07 {
     @FindBy(xpath="//div[@style='pointer-events: none;']")
     public static WebElement randevuKabulTextElementi;
 
-    @FindBy(xpath="//span[text()='Administration']")
-    public WebElement administrationElementi;
-
-    @FindBy(xpath="//span[text()='User management']")
-    public WebElement userManagementButonu;
-
-    @FindBy(xpath="(//span[text()='View'])[13]")
-    public WebElement userViewButonu;
-
-    @FindBy(xpath="//span[text()='First name']")
-    public WebElement userFirstNameElement;
-
-    @FindBy(xpath="//span[text()='Last name']")
-    public WebElement userLastNameElement;
-
-    @FindBy(xpath="//span[text()='Email']")
-    public WebElement userEmailElement;
-
-    @FindBy(xpath="(//span[text()='Edit'])[13]")
-    public WebElement userEditButton;
-
-    @FindBy(xpath="(//span[text()='Delete'])[13]")
-    public WebElement userDeleteButton;
-
-    @FindBy(xpath="//input[@name='firstName']")
-    public WebElement userIdFirstNameBox;
-
-    @FindBy(xpath="//input[@name='lastName']")
-    public WebElement userIdLastNameBox;
-
-    @FindBy(xpath="//input[@name='email']")
-    public WebElement userIdMailBox;
-
-    @FindBy(xpath="//input[@name='activated']")
-    public WebElement activatedBox;
-
-    @FindBy(xpath="//option[@value='ROLE_ADMIN']")
-    public WebElement profilsRoleAdmin;
-
-    @FindBy(xpath="//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
-    public WebElement rolKabulYaziElementi;
-
-    @FindBy(xpath="//span[text()='Save']")
-    public WebElement saveButonu;
-
-    @FindBy(xpath="//option[@value='ROLE_USER']")
-    public WebElement profilsRoleUser;
-
-    @FindBy(xpath="//option[@value='ROLE_PATIENT']")
-    public WebElement profilsRolePatient;
-
-    @FindBy(xpath="//option[@value='ROLE_STAFF']")
-    public WebElement profilsRoleStaff;
-
-    @FindBy(xpath="//option[@value='ROLE_PHYSICIAN']")
-    public WebElement profilsRolePhysician;
 
 
 
-*/
+
 
 
 

@@ -14,15 +14,6 @@ Feature: US07 Hastalar randevu tarihi oluşturabilmelidir.
 
 
 
-
-  @US007   @TC01
-  Scenario: TC01 Kullanıcı geçerli tarih girmelidir. (güncel tarihi veya gelecekteki tarihleri seçebilmelidir)
-
-    Given Appointment DateTime altindaki kutucuga gunun tarihi girilir
-    Then 2 saniye bekler
-    And Send an Appointment Request'e tiklanir
-    And Kullanici sayfayi kapatir
-
   @US007  @TC01
   Scenario: TC01-2 Kullanici gelecekteki tarihi girebilmelidir
 
@@ -38,6 +29,7 @@ Feature: US07 Hastalar randevu tarihi oluşturabilmelidir.
     Then Appointment DateTime altindaki kutucuga ileri bir tarih girilir
     Then 2 saniye bekler
     And Girilen tarihin gun.ay.yil formatinda oldugu test edilir
+    Then 1 saniye bekler
     And Send an Appointment Request'e tiklanir
     And Kullanici sayfayi kapatir
 
@@ -47,6 +39,7 @@ Feature: US07 Hastalar randevu tarihi oluşturabilmelidir.
       Then Kullanici appointment DateTime Gecmis bir tarih girer
       Then 2 saniye bekler
       And Kullanici gecmis bir tarihle randevu alinamayacagini test eder
+      Then 1 saniye bekler
       And Send an Appointment Request'e tiklanir
       And Kullanici sayfayi kapatir
 

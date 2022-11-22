@@ -1,38 +1,17 @@
-Feature:Hastalar randevu tarihi olusturabilmelidir.
+Feature: US0707 Hastalar randevu tarihi oluşturabilmelidir
 
-  @US07_TC01
-  Scenario:Gecerli tarih girilmeli
-    Given kullanici Medunna internet sitesinin anasayfasina gider
-    Then Kullanici anasayfadaki account-menuye tiklar
-    And  Hasta sign in elementini tiklar
-    And  Hasta gecerli bir username girer
-    And  Hasta gecerli bir password girer
-    And Hasta signinButonuna tiklar
-    And Hasta My Pages-patient elementine tiklar
-    And Hasta Make an Appointment butonuna tiklar
-    Then Hasta Phone boxa telefon numarasi girer
-    And  Hasta appointment DateTime Gecmis bir tarih girer
-    And Hasta gecmis bir tarihle randevu alinamayacagini test eder
-    And Hasta appointment DateTime Boxa guncel veya gelecekteki bir tarih girer
-    And Hasta appointment request butonunu tiklar
-    And Hasta guncel veya gelecek bir tarih girilebilecegini dogrular
-    And Hasta Sayfayi kapatir
+  Background:
+    Given kullanıcı "medunnaUrl" sayfasına gider
+    Then  kullanıcı anasayfadaki Make an Appointment butonuna tıklar
+    And Kullanici tüm bilgilerini girer
 
 
+  @US007  @TC01
+  Scenario: TC01-2 Kullanici gelecekteki tarihi girebilmelidir
 
-  @US07_TC02
-  Scenario:Gecerli tarih girilmeli
-    Given kullanici Medunna internet sitesinin anasayfasina gider
-    Then Kullanici anasayfadaki account-menuye tiklar
-    And  Hasta sign in elementini tiklar
-    And  Hasta gecerli bir username girer
-    And  Hasta gecerli bir password girer
-    And Hasta signinButonuna tiklar
-    And Hasta My Pages-patient elementine tiklar
-    And Hasta Make an Appointment butonuna tiklar
-    Then Hasta Phone boxa telefon numarasi girer
-    And Hasta appointment DateTime Boxa guncel veya gelecekteki bir tarih girer
-    And Hasta appointment request butonunu tiklar
-    And Hasta girilen tarihin gg.aa.yyyy formunda oldugunu dogrular
-    And Hasta Sayfayi kapatir
+    Then Appointment DateTime altindaki kutucuga ileri bir tarih girilir
+    Then 2 saniye bekler
+    And Send an Appointment Request'e tiklanir
+    And Kullanici sayfayi kapatir
+
 
