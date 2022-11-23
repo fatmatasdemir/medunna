@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml" },
         features = "src/test/resources",
-        glue = {"stepdefinitions","hooks"},
-        tags = "@zor",
+        glue = {"stepDefinitionsUI","hooks"},
+        tags = "@Deneme",
         dryRun = false
 
 )
@@ -20,7 +20,5 @@ import org.junit.runner.RunWith;
 
 
 public class TestRunner1 {
-
-
 
 }
