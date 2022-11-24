@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
         plugin={"html:target/cucumber-reports2.html",
                 "json:target/json-reports/cucumber2.json",
                 "junit:target/xml-report/cucumber2.xml" },
-        features = "src/test/resources/features",
-        glue = "stepDefinitions",
+        features = "src/test/resources",
+        glue = {"stepDefinitionsUI","hooks"},
         tags = "@zor",
         dryRun = false
 
