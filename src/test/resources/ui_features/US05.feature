@@ -6,14 +6,14 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     Given kullanıcı "medunnaUrl" sayfasına gider
     And  kullanıcı anasayfadaki Make an Appointment butonuna tıklar
     Then 1 saniye bekler
-    Then kullanıcı bir "<FirstName>" yazar ve bu alanı boş bırakamaz
+     And kullanıcı bir "<FirstName>" yazar ve bu alanı boş bırakamaz
     Then 1 saniye bekler
-    Then kullanıcı sayfayı kapatır
+    And kullanıcı sayfayı kapatır
 
 
     Examples:
       |FirstName|
-      |Fatma|
+      |Derya|
 
 
   @us005tc02  @all
@@ -26,7 +26,8 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     Then 1 saniye bekler
     And Your SSN is invalid yazısının olmadığı test edilir.
     Then 1 saniye bekler
-    Then kullanıcı sayfayı kapatır
+    And kullanıcı sayfayı kapatır
+
 
 
     Examples:
@@ -43,12 +44,12 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     Then kullanıcı LastName kısmına bir "<LastName>" yazar ve bu alanı boş bırakamaz
     Then 1 saniye bekler
     And Last Name kısmının altında Your "<LastName>" is required. yazısının olmadığı  test edilir.
-    Then kullanıcı sayfayı kapatır
+    And kullanıcı sayfayı kapatır
 
 
     Examples:
       | LastName|
-      |Deniz|
+      |Gökdeniz|
 
 
 
@@ -61,7 +62,7 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     Then kullanıcı email kısmına bir "<Email>" yazar ve bu alanı boş bırakamaz
     Then 1 saniye bekler
     And Email kısmının altında Your "<Email>" is required. yazısının olmadığı  test edilir.
-    Then kullanıcı sayfayı kapatır
+    And kullanıcı sayfayı kapatır
 
 
     Examples:
@@ -81,8 +82,7 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     And telefon numarasının altında Your "<PhoneNumber>" is required. yazısının olmadığı  test edilir.
     Then 1 saniye bekler
     And kullanıcı Send an Appointment Request butonuna tıklar
-    Then kullanıcı sayfayı kapatır
-
+    And kullanıcı sayfayı kapatır
 
     Examples:
       |PhoneNumber|
@@ -114,3 +114,35 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     Examples:
       |username|password|
       |fatmademir|Team02@12345.|
+
+
+  @us005tc07
+
+  Scenario Outline: Hasta gecersiz bilgilerle randevu olusturamamali
+
+    Given kullanıcı "medunnaUrl" sayfasına gider
+    And 1 saniye bekler
+    When kullanıcı anasayfadaki Make an Appointment butonuna tıklar
+    And 1 saniye bekler
+    And kullanıcı bir "<firstName>" yazar
+    And 1 saniye bekler
+    And kullanıcı LastName kısmına bir "<lastName>" yazar
+    And 1 saniye bekler
+    And kullanıcı kayıtlı "<SSNN>" yazar
+    And 1 saniye bekler
+    And kullanıcı email kısmına bir "<email>" yazar
+    And 1 saniye bekler
+    And kullanıcı telefon numarası kısmına 10 rakamlı "<phoneNumber>" girer
+    And 1 saniye bekler
+    And Kullanici randevu tarihini  secer
+    And 3 saniye bekler
+    And kullanıcı Send an Appointment Request butonuna tıklar
+    And 3 saniye bekler
+    Then Kullanici ekranda Appointment registration saved mesajini gorememeli
+
+    Examples:
+      |firstName| SSNN| lastName|email| phoneNumber|
+      |Vuslat |646-12-1240| Candemir|team02@gmail.com|8522739871|
+
+
+
