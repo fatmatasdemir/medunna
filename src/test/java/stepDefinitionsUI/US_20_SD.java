@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitionsUI;
 
 import io.cucumber.java.en.When;
 import pages.US_20_page;

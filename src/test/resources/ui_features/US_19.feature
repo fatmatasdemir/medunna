@@ -38,7 +38,7 @@ Feature: US_19   Create new Staff Functionality
     And Admin, clicks Item and Titles and clicks staff button
     Then Admin edits Personnel information
     Then Click the save button
-    And Verify    messagem
+    And Verify    message
 
 
   Scenario: US_19 TC_05 User can delete their info
