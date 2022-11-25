@@ -16,7 +16,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static pages.US05_06_07.LastName;
 
-public class US05_06_07_StepDefinition {
+public class US05_06_07_SD {
 
  US05_06_07 page = new US05_06_07();
  Faker faker = new Faker();
