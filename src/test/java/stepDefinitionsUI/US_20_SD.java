@@ -1,10 +1,12 @@
 package stepDefinitionsUI;
 
 import io.cucumber.java.en.When;
-import pages.US_20_page;
+import org.openqa.selenium.support.PageFactory;
+import pages.US_20_Page;
 
 public class US_20_SD {
-    US_20_page page = new US_20_page();
+
+    US_20_Page page = new US_20_Page();
 
 
     @When("Admin, clicks Administirstor and clicks user management button")
