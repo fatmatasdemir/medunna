@@ -10,7 +10,6 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     Then 1 saniye bekler
     And kullanıcı sayfayı kapatır
 
-
     Examples:
       |FirstName|
       |Derya|
@@ -49,7 +48,7 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
 
     Examples:
       | LastName|
-      |Gökdeniz|
+      |Hayalmutsuz|
 
 
 

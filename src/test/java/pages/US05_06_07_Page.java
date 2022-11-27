@@ -5,14 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import java.util.List;
-
-public class US05_06_07 {
+public class US05_06_07_Page {
 
 
 
 
-    public US05_06_07()  {
+    public US05_06_07_Page()  {
         PageFactory.initElements(Driver.getDriver(), this);}
 
 
