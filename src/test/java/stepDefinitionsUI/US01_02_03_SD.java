@@ -52,4 +52,16 @@ public class US01_02_03_SD {
 
         Thread.sleep(saniye*1000);
     }
+
+    @Then("User enters a {string}in the SSN box on the page")
+    public void userEntersAInTheSSNBoxOnThePage(String gecerliSSN) {
+
+
+
+    }
+
+    @And("User sees your SSN is invalid")
+    public void userSeesYourSSNIsInvalid() {
+
+    }
 }
