@@ -1,13 +1,12 @@
 package stepDefinitionsUI;
 
 import io.cucumber.java.en.*;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import pages.US01_02_03_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US01_02_03_SD {
+public class US01_02_03_StepDefinition {
 
       US01_02_03_Page object =new US01_02_03_Page();
 
@@ -51,5 +50,17 @@ public class US01_02_03_SD {
     public void userWaitsSeconds(int saniye) throws InterruptedException {
 
         Thread.sleep(saniye*1000);
+    }
+
+    @Then("User enters a {string}in the SSN box on the page")
+    public void userEntersAInTheSSNBoxOnThePage(String gecerliSSN) {
+
+
+
+    }
+
+    @And("User sees your SSN is invalid")
+    public void userSeesYourSSNIsInvalid() {
+
     }
 }
