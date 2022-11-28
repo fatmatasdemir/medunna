@@ -1,12 +1,10 @@
-package stepDefinitionsUI;
+package stepDefinitions;
 
 import io.cucumber.java.en.When;
 import pages.US_19_20_21_Page;
 
-
 public class US_20_SD {
-
-    US_19_20_21_Page page= new US_19_20_21_Page();
+   US_19_20_21_Page page=new US_19_20_21_Page();
 
 
     @When("Admin, clicks Administirstor and clicks user management button")

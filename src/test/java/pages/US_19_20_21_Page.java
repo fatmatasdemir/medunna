@@ -1,23 +1,20 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 
-public class US_19_Page {
-    public US_19_Page() {  PageFactory.initElements(Driver.getDriver(), this);
+public class US_19_20_21_Page {
+    public US_19_20_21_Page() {  PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(id = "account-menu")
     public WebElement icon;
 
-
     @FindBy(linkText = "Sign in")
     public WebElement signIn;
-
 
     @FindBy(id = "username")
     public WebElement username;
@@ -61,7 +58,7 @@ public class US_19_Page {
     public WebElement staffState;
 
     @FindBy(xpath = "//button[@type='submit']/*/*")
-    public WebElement save;
+    public static WebElement save;
 
     @FindBy(linkText = "View")
     public WebElement view;
@@ -73,5 +70,54 @@ public class US_19_Page {
     public WebElement deleteIcon;
     @FindBy(id = "jhi-confirm-delete-staff")
     public WebElement deleteBtn;
+
+    @FindBy(linkText = "MY PAGES")
+    public WebElement myPages;
+
+    @FindBy(linkText = "Search Patient")
+    public WebElement searchPatientIcon;
+
+    @FindBy(linkText = "Show Appointments")
+    public WebElement showAppoin;
+
+    @FindBy(id = "appointment-status")
+    public WebElement status;
+
+    @FindBy(xpath = "//option[@value='PENDING']")
+    public WebElement pending;
+
+    @FindBy(id = "appointment-physician")
+    public WebElement physician;
+
+    @FindBy(xpath = "//option[@value='COMPLETED']")
+    public WebElement completed;
+    @FindBy(id = "appointment-anamnesis")
+    public WebElement anamnesis;
+
+    @FindBy(id = "appointment-treatment")
+    public WebElement treatment;
+    @FindBy(id = "appointment-diagnosis")
+    public WebElement diagnose;
+
+    @FindBy(xpath = "//option[@value='CANCELLED']")
+    public WebElement cancelled;
+
+    @FindBy(linkText = "Administration")
+    public WebElement administration;
+
+    @FindBy(linkText = "User management")
+    public WebElement management;
+
+    @FindBy(xpath = "//select[@id='authorities']")
+    public WebElement profil;
+
+    @FindBy(linkText = "ROLE_PHYSICIAN")
+    public WebElement role;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveBtn;
+
+    @FindBy(linkText = "Show Tests")
+    public WebElement test;
 
 }

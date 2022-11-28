@@ -4,12 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.US_19_Page;
-import utilities.ConfigReader;
+import pages.US_19_20_21_Page;
 import utilities.Driver;
 
 public class US_19_SD {
-    US_19_Page page = new US_19_Page();
+    US_19_20_21_Page page = new US_19_20_21_Page();
 
     @Given("Navigate to medunna")
     public void navigateToMedunna()  {
@@ -66,8 +65,11 @@ public class US_19_SD {
 
     @And("Click the save button")
     public void clickTheSaveButton() throws InterruptedException {
+//        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+//        jse.executeScript("arguments[0].scrollIntoView(true);", US_19_Page.save);
+//        jse.executeScript("arguments[0].click()", US_19_Page.save);
         Thread.sleep(2000);
-        page.save.click();
+        page.saveBtn.click();
         Thread.sleep(2000);
     }
 
