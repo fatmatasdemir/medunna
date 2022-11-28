@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitionsUI;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
@@ -27,7 +27,8 @@ public class US05_06_07_StepDefinition {
 
  @Given("kullanıcı {string} sayfasına gider")
  public void kullanıcıSayfasınaGider(String arg0) {
-  Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+
+  Driver.getDriver().get(ConfigReader.getProperty("medunna_login_url"));
  }
 
  @And("kullanıcı anasayfadaki Make an Appointment butonuna tıklar")
