@@ -1,4 +1,4 @@
-Feature: database test
+Feature: Database testi
 
   @US005_DBTest
   Scenario: Hasta randevulari database test

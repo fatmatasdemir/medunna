@@ -233,5 +233,16 @@ public class DatabaseUtility {
         }
         return resultSet;
     }
+
+
+    public static void createConnection(String url, String user, String password) {
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
 }
 

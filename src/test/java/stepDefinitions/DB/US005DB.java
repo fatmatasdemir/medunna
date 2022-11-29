@@ -1,39 +1,35 @@
-package  stepDefinitions.DB;
-import io.cucumber.java.en.And;
+package stepDefinitions.DB;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.testng.asserts.SoftAssert;
 import utilities.DatabaseUtility;
 
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.Map;
 
-public class US_005DB {
-
+public class US005DB {
     SoftAssert softAssert=new SoftAssert();
     Map<String, Object> randevuBilgileri;
 
-
     @Given("Kullanici connection kurar")
-    public void kullaniciConnectionKurar() {
+    public void kullanici_connection_kurar() {
         DatabaseUtility.createConnection();
 
+        //  createConnection(ConfigReader.getProperty("database_medunna_url"),
+        //  ConfigReader.getProperty("db_username"), ConfigReader.getProperty("db_password"));
 
 
     }
-
-    @And("Kullanici yeni kayitli randevu bilgilerini database'den alir")
-    public void kullaniciYeniKayitliRandevuBilgileriniDatabaseDenAlir() {
+    @Given("Kullanici yeni kayitli randevu bilgilerini database'den alir")
+    public void kullanici_yeni_kayitli_randevu_bilgilerini_database_den_alir() {
         String query = "select * from appointment where id=353476";
         randevuBilgileri = DatabaseUtility.getRowMap(query);
         System.out.println("Randevu bilgileri" + randevuBilgileri);
 
 
     }
-
     @Then("Kullanici randevu bilgilerini dogrular")
-    public void kullaniciRandevuBilgileriniDogrular() {
+    public void kullanici_randevu_bilgilerini_dogrular() {
         String actualID = randevuBilgileri.get("id").toString();
         System.out.println("actualID = " + actualID);
         String actualName = randevuBilgileri.get("last_modified_by").toString();
@@ -55,6 +51,9 @@ public class US_005DB {
         softAssert.assertEquals(actualStatus, expectedStatus, "Status uyusmadi");
 
         softAssert.assertAll();
+
+
+
 
 
 
