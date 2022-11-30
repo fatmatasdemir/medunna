@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 
 public class US_19_20_21_Page {
     public US_19_20_21_Page() {  PageFactory.initElements(Driver.getDriver(), this);
@@ -71,6 +73,10 @@ public class US_19_20_21_Page {
     @FindBy(id = "jhi-confirm-delete-staff")
     public WebElement deleteBtn;
 
+    @FindBy(linkText = "Delete")
+    public WebElement delete;
+
+
     @FindBy(linkText = "MY PAGES")
     public WebElement myPages;
 
@@ -119,5 +125,8 @@ public class US_19_20_21_Page {
 
     @FindBy(linkText = "Show Tests")
     public WebElement test;
+
+    @FindBy(linkText = "Physician")
+    public WebElement doktor;
 
 }
