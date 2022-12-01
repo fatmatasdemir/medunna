@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitionsUI;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.Name;
@@ -548,6 +548,9 @@ public class MedunnaStepDefinition {
 
     @And("ekranda choose file sekmesi yaninda yukledigi remin adinin oldugunu dogrular")
     public void ekrandaChooseFileSekmesiYanindaYukledigiReminAdininOldugunuDogrular() {
+        select =new Select(medunna.image);
+      String value= medunna.image.getAttribute("value");
+       Assert.assertFalse(value.isEmpty());
     }
 
 
@@ -663,6 +666,11 @@ public class MedunnaStepDefinition {
     public void userIsminiSecer() {
 
         medunna.userPhysician.sendKeys("ruthie.dickinson:881-42-4842");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @And("Save kismina tiklar")
@@ -675,5 +683,119 @@ public class MedunnaStepDefinition {
 
         jse.executeScript("arguments[0].click()", medunna.saveUserAdmin);
 
+    }
+
+    @And("Acilan sayfada ilk ulkenin delete butonuna tiklar")
+    public void acilanSayfadaIlkUlkeninDeleteButonunaTiklar() {
+        medunna.deleteCountry.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @And("gelen onay uyarisinda delete secenegini tiklar")
+    public void gelenOnayUyarisindaDeleteSeceneginiTiklar() {
+       medunna.countryDeleteUyariMesaji.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @And("Ekranda A Country is deleted with identifier mesajinin gorundugunu dogrular")
+    public void ekrandaACountryIsDeletedWithIdentifierMesajininGorundugunuDogrular() {
+
+        String expectedText ="A Country is deleted with identifier";
+        String actualText =medunna.countryDeleteUyariMesaji.getText();
+        Assert.assertTrue(actualText.contains(expectedText));
+
+    }
+
+    @And("Acilan menude State\\/City secenegini tiklar")
+    public void acilanMenudeStateCitySeceneginiTiklar() {
+        medunna.stateCity.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        
+    }
+
+    @And("create a new State\\/City sekmesine tiklar")
+    public void createANewStateCitySekmesineTiklar() {
+        medunna.createStateCity.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        
+    }
+
+    @And("name kismina bir isim girer")
+    public void nameKisminaBirIsimGirer() {
+        medunna.nameStateCity.sendKeys("mahalle");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        
+    }
+
+    @And("State\\/City kisminda istedigi ulkeyi secer")
+    public void stateCityKismindaIstedigiUlkeyiSecer() {
+        select=new Select(medunna.selectStateCity);
+        select.selectByVisibleText("Germany");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        
+    }
+
+
+    @And("A new State\\/City is created with identifier mesajini dogrular")
+    public void aNewStateCityIsCreatedWithIdentifierMesajiniDogrular() {
+        String expectedText ="A new State/City is created with identifier";
+        String actualText =medunna.countryDeleteUyariMesaji.getText();
+        Assert.assertTrue(actualText.contains(expectedText));
+
+    }
+
+    @And("Acilan sayfada ilk doktorun delete sekmesine tiklar")
+    public void acilanSayfadaIlkDoktorunDeleteSekmesineTiklar() {
+        medunna.deletePhysician.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        
+    }
+
+
+    @And("Acilan Confirm delete operation uyarisinda delete butonuna tiklar")
+    public void acilanConfirmDeleteOperationUyarisindaDeleteButonunaTiklar() {
+        medunna.confirmDeletePhysician.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        
+    }
+
+    @And("ekranda {string} uyarisinin gorundugunu dogrular")
+    public void ekrandaUyarisininGorundugunuDogrular(String arg0) {
+        String expectedText ="A Physician is deleted with identifier";
+        String actualText =medunna.physicianDeleteMessage.getText();
+        Assert.assertTrue(actualText.contains(expectedText));
     }
 }

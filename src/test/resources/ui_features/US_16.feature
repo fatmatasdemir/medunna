@@ -14,7 +14,7 @@ Feature: Medunna Room
 
 
 
-    And Acilan sayfada create a new room sekmesine tiklar
+    And Acilan sayfada cr eate a new room sekmesine tiklar
     And Save secenegine tiklar
     Then Room Number kisminda This field is required yazisinin gorunur oldugunu dogrular
 

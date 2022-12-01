@@ -2,7 +2,6 @@ Feature: Medunna Room
 
   Background: Ortak adimlar
     Given admin "medunna_login_url" sayfasina gider
-
     And ana sayfadaki giris ikonuna tiklar
     And sign in sekmesine tiklar
     When gecerli bir admin_user_name ve sifre girer
@@ -42,9 +41,17 @@ Feature: Medunna Room
     And Save secenegine tiklar
     And ekranda A Physician is updated with identifier yazisinin ciktigini dogrular
 
+  @US18_TC_04
+  Scenario:Admin mevcut doktorlari silebilir.
+    And Acilan ana sayfada ust menudeki Items&titles sekmesine tiklar
+    And Acilan menude Physician secenegini tiklar
+    And Acilan sayfada ilk doktorun delete sekmesine tiklar
+    And Acilan Confirm delete operation uyarisinda delete butonuna tiklar
+    And ekranda "A Physician is deleted with identifier" uyarisinin gorundugunu dogrular
 
 
-  @US18_TC_06
+
+  @US18_TC_05
   Scenario:Admin mevcut kullanicilar arasindan doktoru secmelidir
 
     And Administration menusunden User management secenegine tiklar

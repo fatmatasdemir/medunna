@@ -229,4 +229,42 @@ public class US_16_17_18_28 {
     public WebElement saveUserAdmin;
     @FindBy(xpath = "//select[@id=\"authorities\"]")
     public WebElement profiles;
+
+    @FindBy(xpath = "(//span[text()='Delete'])[1]")
+    public WebElement deleteCountry;
+
+    @FindBy(xpath = "//button[@id=\"jhi-confirm-delete-country\"]")
+    public WebElement uyariDelete;
+
+
+    @FindBy(xpath = "//div[starts-with(text(),'A Country is deleted with identifier')]")
+    public WebElement countryDeleteUyariMesaji;
+
+    @FindBy(xpath = "//span[text()='State/City']")
+    public WebElement stateCity;
+
+    @FindBy(xpath = "//span[text()='Create a new State/City']")
+    public WebElement createStateCity;
+
+    @FindBy(css = "[name=\"name\"]")
+    public WebElement nameStateCity;
+
+    @FindBy(css = "[name=\"state.id\"]")
+    public WebElement selectStateCity;
+
+    @FindBy(xpath = "//div[starts-with(text(),'A new State/City is created with identifier')]")
+    public WebElement stateCityDeleteMesaji;
+
+    @FindBy(css = "[href=\"/physician/3651/delete?page=1&sort=id,asc\"]")
+    public WebElement deletePhysician;
+
+    @FindBy(css = "[id=\"jhi-confirm-delete-physician\"]")
+    public WebElement confirmDeletePhysician;
+
+    @FindBy(xpath = "//div[starts-with(text(),'A Physician is deleted with identifier')]")
+    public WebElement physicianDeleteMessage;
+
+    @FindBy(css = "[id=\"image\"]")
+    public WebElement image;
+
 }
