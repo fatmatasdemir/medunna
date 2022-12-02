@@ -32,7 +32,7 @@ public class US005DB {
     public void kullanici_randevu_bilgilerini_dogrular() {
         String actualID = randevuBilgileri.get("id").toString();
         System.out.println("actualID = " + actualID);
-        String actualName = randevuBilgileri.get("last_modified_by").toString();
+        String actualName = randevuBilgileri.get("prescription").toString();
         System.out.println("actualName = " + actualName);
         String actualStart_date = randevuBilgileri.get("start_date").toString();
         System.out.println("actualStart_date = " + actualStart_date);
@@ -41,7 +41,7 @@ public class US005DB {
 
 
         String expectedID = "353476";
-        String expectedName = "doctorfatma";
+        String expectedName = "dert etme";
         String expectedStartDate = "2022-11-30 00:00:00.0";
         String expectedStatus = "PENDING";
 

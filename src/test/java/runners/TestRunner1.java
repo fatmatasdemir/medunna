@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml" },
 
         features = "src/test/resources",
-        glue = {"stepDefinitionsUI","hooks"},
+        glue = {"stepDefinitions","hooks"},
         tags = "  @us005tc01",
 
         dryRun = false
@@ -29,7 +29,7 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml" },
         features = "src/test/resources/features",
-        glue = "stepDefinitions",
+        glue = "stepDefinitionsUI.stepDefinitions",
         tags = "@us005tc01",
         dryRun = false
 
