@@ -19,7 +19,7 @@ her scenario'dan önce ve/veya sonra bu methodlar çalışacaktır
 Bu da bizim isteyeceğimiz bir durum değildir
 
 Cucumber'da @before @after kullanma ihtiyacımız olursa
-bunu stepDefinitions package'i altında oluşturacağımız
+bunu stepDefinitionsUI.stepDefinitions package'i altında oluşturacağımız
 Hooks class'ına koyarız
 
 

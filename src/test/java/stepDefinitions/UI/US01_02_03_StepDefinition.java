@@ -1,4 +1,4 @@
-package stepDefinitionsUI;
+package stepDefinitions.UI;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
