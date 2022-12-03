@@ -1,5 +1,5 @@
 Feature: Registration should be available using SSN, Firstname and Lastname
-  @Deneme
+  @Dene-me
   Scenario:
     Given User goes to Medunna url
     When  user navigates the register in page
