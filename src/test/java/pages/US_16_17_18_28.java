@@ -241,7 +241,7 @@ public class US_16_17_18_28 {
     public WebElement countryDeleteUyariMesaji;
 
     @FindBy(xpath = "//span[text()='State/City']")
-    public WebElement stateCity;
+    public WebElement stateCityDDM;
 
     @FindBy(xpath = "//span[text()='Create a new State/City']")
     public WebElement createStateCity;

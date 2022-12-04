@@ -9,9 +9,9 @@ import org.junit.runner.RunWith;
         plugin={"html:target/cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml" },
-        features = "src/test/resources/features",
+        features = "src/test/resources/ui_features",
         glue = "stepDefinitions",
-        tags = "@US16_TC_11", // iki tag'ı aynı anda çalıştırmak isterseniz "@gp1 or @gp2"
+        tags = "@US18_TC_02", // iki tag'ı aynı anda çalıştırmak isterseniz "@gp1 or @gp2"
         dryRun = false
 
 )

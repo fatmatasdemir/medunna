@@ -1,4 +1,4 @@
-Feature: Medunna Room
+Feature: Medunna doktor
 
   Background: Ortak adimlar
     Given admin "medunna_login_url" sayfasina gider
@@ -34,8 +34,6 @@ Feature: Medunna Room
     And last name kismina bir soyisim girer
     And speciality kisminda Internal_medicine bolumunu secer
     And Bolumun secildigini dogrular
-    And Acilan sayfada Choose File kismindan profil resmi atamasi yapar
-    And ekranda choose file sekmesi yaninda yukledigi remin adinin oldugunu dogrular
     And exam fee kismina bir fiyat girer (85)
     And Fiyatin girildigini dogrular
     And Save secenegine tiklar
@@ -43,7 +41,7 @@ Feature: Medunna Room
 
   @US18_TC_04
   Scenario:Admin mevcut doktorlari silebilir.
-    And Acilan ana sayfada ust menudeki Items&titles sekmesine tiklar
+    And Acilan sayfada ust menudeki Items&titles sekmesine tiklar
     And Acilan menude Physician secenegini tiklar
     And Acilan sayfada ilk doktorun delete sekmesine tiklar
     And Acilan Confirm delete operation uyarisinda delete butonuna tiklar
@@ -59,3 +57,11 @@ Feature: Medunna Room
     And Profiles menusunden Doktor secenegine tiklar
     And Save kismina tiklar
     And A user is updated with identifier mesajini dogrular
+
+  @US18_TC_06
+  Scenario: admin doktora profil resmi yukleyebilir
+    And Acilan sayfada ust menudeki Items&titles sekmesine tiklar
+    And Acilan menude Physician secenegini tiklar
+    And Acilan sayfada ilk doktorun edit sekmesine tiklar
+    And Acilan sayfada Choose File kismindan profil resmi atamasi yapar
+    And ekranda choose file sekmesi yaninda yukledigi remin adinin oldugunu dogrular

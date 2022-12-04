@@ -109,20 +109,7 @@ public class MedunnaStepDefinition {
         }
     }
 
-    @And("Save secenegine tiklar")
-    public void saveSecenegineTiklar() {
 
-      //  jse.executeScript("arguments[0].scrollIntoView(true);", medunna.save);
-        jse.executeScript("arguments[0].click()", medunna.saveRoom);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-
-
-    }
 
 
     @Then("Room Number kisminda This field is required yazisinin gorunur oldugunu dogrular")
@@ -548,6 +535,11 @@ public class MedunnaStepDefinition {
 
     @And("ekranda choose file sekmesi yaninda yukledigi remin adinin oldugunu dogrular")
     public void ekrandaChooseFileSekmesiYanindaYukledigiReminAdininOldugunuDogrular() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         select =new Select(medunna.image);
       String value= medunna.image.getAttribute("value");
        Assert.assertFalse(value.isEmpty());
@@ -714,18 +706,7 @@ public class MedunnaStepDefinition {
 
     }
 
-    @And("Acilan menude State\\/City secenegini tiklar")
-    public void acilanMenudeStateCitySeceneginiTiklar() {
-        medunna.stateCity.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        
-    }
-
-    @And("create a new State\\/City sekmesine tiklar")
+    @And("create a new State City sekmesine tiklar")
     public void createANewStateCitySekmesineTiklar() {
         medunna.createStateCity.click();
         try {
@@ -747,7 +728,7 @@ public class MedunnaStepDefinition {
         
     }
 
-    @And("State\\/City kisminda istedigi ulkeyi secer")
+    @And("State City kisminda istedigi ulkeyi secer")
     public void stateCityKismindaIstedigiUlkeyiSecer() {
         select=new Select(medunna.selectStateCity);
         select.selectByVisibleText("Germany");
@@ -760,7 +741,7 @@ public class MedunnaStepDefinition {
     }
 
 
-    @And("A new State\\/City is created with identifier mesajini dogrular")
+    @And("A new State City is created with identifier mesajini dogrular")
     public void aNewStateCityIsCreatedWithIdentifierMesajiniDogrular() {
         String expectedText ="A new State/City is created with identifier";
         String actualText =medunna.countryDeleteUyariMesaji.getText();
@@ -797,5 +778,44 @@ public class MedunnaStepDefinition {
         String expectedText ="A Physician is deleted with identifier";
         String actualText =medunna.physicianDeleteMessage.getText();
         Assert.assertTrue(actualText.contains(expectedText));
+    }
+
+
+    @And("Acilan menude State City secenegini tiklar")
+    public void acilanMenudeStateCitySeceneginiTiklar() {
+
+       medunna.stateCityDDM.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
+    @And("Save secenegine tiklar")
+    public void saveSecenegineTiklar() {
+
+        //  jse.executeScript("arguments[0].scrollIntoView(true);", medunna.save);
+        jse.executeScript("arguments[0].click()", medunna.saveRoom);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+    }
+
+    @And("save secenegini tiklar")
+    public void saveSeceneginiTiklar() {
+        jse.executeScript("arguments[0].click()", medunna.saveRoom);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

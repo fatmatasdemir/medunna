@@ -26,11 +26,11 @@ Feature: Medunna Room
 
 
   @US28_TC_03
-  Scenario:
+  Scenario:Kullanici, ülkeye gore ilgili eyaletler veya sehirler olusturabilmelidir.
 
-    And Acilan menude State/City secenegini tiklar
-    And create a new State/City sekmesine tiklar
+    And Acilan menude State City secenegini tiklar
+    And create a new State City sekmesine tiklar
     And name kismina bir isim girer
-    And State/City kisminda istedigi ulkeyi secer
-    And save secenegine tiklar
-    And A new State/City is created with identifier mesajini dogrular
+    And State City kisminda istedigi ulkeyi secer
+    And save secenegini tiklar
+    And A new State City is created with identifier mesajini dogrular
