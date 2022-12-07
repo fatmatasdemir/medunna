@@ -51,9 +51,16 @@ public class US15_Page {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement alert;
 
+    @FindBy(xpath = "//*[text()='Your SSN is invalid']")
+    public WebElement invalidSnn;
+
+    @FindBy(xpath = "//*[text()='Your email is invalid.']")
+    public WebElement invalidEmail;
 
 
-    //div[@role='alert']
+
+
+
 
 
 

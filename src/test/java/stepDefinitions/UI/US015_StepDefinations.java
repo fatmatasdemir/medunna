@@ -115,4 +115,25 @@ public class US015_StepDefinations {
     }
 
 
+    @Then("Kullanici ssn alanina gecersiz bir ssnNo girer")
+    public void kullaniciSsnAlaninaGecersizBirSsnNoGirer() {
+        pages15.formUserSsn.sendKeys(faker.phoneNumber().phoneNumber());
+    }
+
+    @And("Kullanici kayit isleminin basarisiz oldugunu onaylar")
+    public void kullaniciKayitIslemininBasarisizOldugunuOnaylar() {
+
+        Assert.assertTrue(pages15.invalidSnn.isDisplayed());
+    }
+
+    @Then("Kullanici email alanina gecersiz bir emailAdresi girer")
+    public void kullaniciEmailAlaninaGecersizBirEmailAdresiGirer() {
+        pages15.formUserEmail.sendKeys(faker.name().username());
+    }
+
+    @And("Kullanici hatali email uzarisi alir")
+    public void kullaniciHataliEmailUzarisiAlir() {
+        Assert.assertTrue(pages15.invalidEmail.isDisplayed());
+    }
+
 }
