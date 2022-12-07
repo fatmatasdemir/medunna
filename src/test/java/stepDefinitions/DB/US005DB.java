@@ -15,10 +15,6 @@ public class US005DB {
     public void kullanici_connection_kurar() {
         DatabaseUtility.createConnection();
 
-        //  createConnection(ConfigReader.getProperty("database_medunna_url"),
-        //  ConfigReader.getProperty("db_username"), ConfigReader.getProperty("db_password"));
-
-
     }
     @Given("Kullanici yeni kayitli randevu bilgilerini database'den alir")
     public void kullanici_yeni_kayitli_randevu_bilgilerini_database_den_alir() {
