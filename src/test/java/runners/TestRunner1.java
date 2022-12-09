@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources",
         glue = {"stepDefinitions","hooks"},
-        tags = "  @us005tc01"
+        tags = "   @api"
 
 
 )

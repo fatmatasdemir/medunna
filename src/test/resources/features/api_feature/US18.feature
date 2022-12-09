@@ -1,6 +1,8 @@
-Feature:physician api test
+Feature:US18 Kullanici Doktor bilgilerini  dogrular
+@api18
+  Scenario:TC01 Kullanici Doktor bilgilerini  dogrular
 
-  Scenario: API kullanarak doktorları doğrulayın
-    Given Kullanici "330662" id'li doktor verileri icin bir get request gonderir
-    When status kodunun "200"oldugunu dogrular
-    Then kullanici physician datasini dogrular
+   Given Kullanici "330662" id'li doktor verileri icin bir get request gonderir
+
+    Then Kullanici Doktor bilgilerini dogrular
+

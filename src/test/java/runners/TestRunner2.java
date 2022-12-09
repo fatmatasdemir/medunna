@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber2.xml" },
         features = "src/test/resources",
         glue = {"stepDefinitions","hooks"},
-        tags = "@zor",
+        tags = "@api18",
         dryRun = false
 
 )
