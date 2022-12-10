@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class US18DB {
+public class US18_DB {
 
 
     String query ;
@@ -21,6 +21,7 @@ public class US18DB {
 
     @Given("kullanici DB ile Medunna veri tabanina baglanir")
     public void kullaniciDBIleMedunnaVeriTabaninaBaglanir() {
+
         DatabaseUtility.createConnection();
     }
 
@@ -44,14 +45,14 @@ public class US18DB {
     @Then("kullanici DB ile alinan datalari dogrular")
     public void kullaniciDBIleAlinanDatalariDogrular() {
         Map<String,Object> expectedData=new HashMap<>();
-        expectedData.put("gender","FEMALE");
-        expectedData.put("first_name","doctorfatma");
-        expectedData.put("last_name","mutsuz");
-        expectedData.put("id",Long.valueOf(330662));
-        expectedData.put("phone","123-456-7890");
-        expectedData.put("blood_group","Apositive");
-        expectedData.put("speciality","PSYCHIATRY");
-        expectedData.put("user_id",Long.valueOf(334415));
+        expectedData.put("gender","MALE");
+        expectedData.put("first_name","Doktor");
+        expectedData.put("last_name","Sadrazam");
+        expectedData.put("id",Long.valueOf(304931));
+        expectedData.put("phone","5555555555");
+        expectedData.put("blood_group","Onegative");
+        expectedData.put("speciality", "INTERNAL_MEDICINE");
+        expectedData.put("user_id",Long.valueOf( 305441));
         expectedData.put("created_by","team02");
 
 

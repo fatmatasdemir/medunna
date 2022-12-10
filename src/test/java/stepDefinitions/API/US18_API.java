@@ -9,14 +9,14 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 
-public class US18API  extends base_url {
+public class US18_API extends base_url {
 
 
     @Given("Kullanici {string} id'li doktor verileri icin bir get request gonderir")
     public void kullaniciIdLiDoktorVerileriIcinBirGetRequestGonderir(String arg0) {
-     spec.pathParams("1","api","2","physicians","3",330662);
+     spec.pathParams("1","api","2","physicians","3",304931);
 
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZWFtMDIiLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY3MDYwODQ5NX0.VWGISk8mpB5VvnaANgSBuVYyp4IfkC7xPSQTpMV0UFNOufOutGSrZtexHQwRdKep8TbS3FYseMLUcoNS3ZbBGw";
+        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzA3Njc5MzZ9.4fyGOq5mYCX3SFMkOdDjyyPanNN5aSLOb26NGVSlliFEaZQQtYSpsBKN97qJzHc03qhzpt-ddaShvKaExysdHQ";
 
         response=given().spec(spec).headers("Authorization","Bearer " + token).
                 when().get("/{1}/{2}/{3}");
@@ -34,18 +34,18 @@ public class US18API  extends base_url {
     public void kullaniciDoktorBilgileriniDogrular() {
  //1-YOL
       JsonPath json=response.jsonPath();
-        Assert.assertEquals(330662,json.getInt("id"));
-        Assert.assertEquals("123-456-7890",json.getString("phone"));
-        Assert.assertEquals("FEMALE",json.getString("gender"));
-        Assert.assertEquals("Apositive",json.getString("bloodGroup"));
+        Assert.assertEquals(304931,json.getInt("id"));
+        Assert.assertEquals("5555555555",json.getString("phone"));
+        Assert.assertEquals("MALE",json.getString("gender"));
+        Assert.assertEquals("Onegative",json.getString("bloodGroup"));
 
 //2-YOL
        response.then().assertThat()
-           .body("id",equalTo(330662)
-                   ,"phone",equalTo("123-456-7890")
-                   ,"gender",equalTo("FEMALE")
-                   ,"phone",equalTo("123-456-7890")
-                   ,"bloodGroup",equalTo("Apositive")
+           .body("id",equalTo(304931)
+                   ,"phone",equalTo("5555555555")
+                   ,"gender",equalTo("MALE")
+                   , "createdBy",equalTo("team02")
+                   ,"bloodGroup",equalTo("Onegative")
                    );
 
     }
