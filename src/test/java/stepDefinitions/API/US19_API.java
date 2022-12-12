@@ -15,7 +15,7 @@ public class US19_API {
     Response response;
     @Given("Kullanici {string} id'li Staff verileri icin bir get request gonderir")
     public void kullaniciIdLiStaffVerileriIcinBirGetRequestGonderir(String arg0) {
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzA3Njc5MzZ9.4fyGOq5mYCX3SFMkOdDjyyPanNN5aSLOb26NGVSlliFEaZQQtYSpsBKN97qJzHc03qhzpt-ddaShvKaExysdHQ";
+        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzA4NTY4Njd9.gYUu4jWAl94wAJY67_cqYlsqcQcscV2dcwX-r6w1_WKRP27RipheaSicOmtxWk8ZiPizXgMBbiXS_1ImYlvuOA";
         response=given().contentType(ContentType.JSON).headers("Authorization","Bearer " + token).
                 when().get("https://medunna.com/api/staff/346151");
         response.prettyPrint();

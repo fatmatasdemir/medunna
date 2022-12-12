@@ -1,5 +1,5 @@
-Feature:US18 Kullanici Staff bilgilerini  dogrular
-  @api18
+Feature:US19 Kullanici Staff bilgilerini  dogrular
+  @api19
   Scenario:TC01 Kullanici Staff bilgilerini  dogrular
 
     Given Kullanici "346151" id'li Staff verileri icin bir get request gonderir

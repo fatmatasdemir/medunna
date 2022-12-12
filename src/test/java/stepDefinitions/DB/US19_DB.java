@@ -3,6 +3,8 @@ package stepDefinitions.DB;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import org.junit.Assert;
 import utilities.DatabaseUtility;
 
@@ -10,9 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.hamcrest.Matchers.equalTo;
+
 public class US19_DB {
 
-
+    Response response;
     String query ;
     List<Map<String,Object>> actualData;
     String Staff;
@@ -43,6 +47,7 @@ public class US19_DB {
 
     @Then("Kullanici DB ile alinan datalari dogrular")
     public void kullaniciDBIleAlinanDatalariDogrular() {
+
         Map<String,Object> expectedData=new HashMap<>();
         expectedData.put("gender","MALE");
         expectedData.put("first_name","Staff");
@@ -63,6 +68,15 @@ public class US19_DB {
         Assert.assertEquals(expectedData.get("user_id"),actualData.get(0).get("user_id"));
         Assert.assertEquals(expectedData.get("created_by"),actualData.get(0).get("created_by"));
 
+
+
+        response.then().assertThat()
+                .body("id",equalTo(346151)
+                        ,"phone",equalTo("1223344556")
+                        ,"gender",equalTo("MALE")
+                        , "createdBy",equalTo("team02")
+                        ,"bloodGroup",equalTo("Apositive")
+                );
 
 
 

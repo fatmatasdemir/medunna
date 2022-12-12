@@ -164,8 +164,54 @@ public class US05_06_07_Page {
     public List<WebElement> testResultsListesi;
 
 
+    //US_26 LOCATELERI
+
+    @FindBy(xpath="//*[text()='CONTACT']")
+    public WebElement contactButton;
+
+    //@FindBy(xpath = "//*[text()=\"575 Eighth Avenue New York, NY 10018\"][1]")
+    //public WebElement location;
+
+    @FindBy(xpath = "//div[@class='info']")
+    public List<WebElement> uclu;
+
+    @FindBy(xpath = "//p[starts-with(text(),'575')]")
+    public WebElement location;
+
+    @FindBy(xpath = "//p[starts-with(text(),'contact@')]")
+    public WebElement email;
+
+    @FindBy(xpath = "(//p[starts-with(text(),'+1 (336)')])[1]")
+    public WebElement call;
+
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement mesajName;
+
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement mesajEmail;
+
+    @FindBy(xpath = "//input[@name='subject']")
+    public WebElement mesajSubject;
 
 
+
+    @FindBy(xpath = "//*[@id='message']")
+    public WebElement mesaj;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement sendButonu;
+
+    @FindBy(xpath = "//*[@id=\"register-form\"]/div[1]/div[1]/div/div")
+    public WebElement NameIsRequired;
+
+    @FindBy(xpath = "//*[@id=\"register-form\"]/div[1]/div[2]/div/div")
+    public WebElement YourEmailIsRequired;
+
+    @FindBy(xpath = "//*[@id=\"register-form\"]/div[2]/div/div/div")
+    public  WebElement ThisFieldIsRequired;
+
+
+    //*[@id="register-form"]/div[2]/div/div/div
 
 
 }
