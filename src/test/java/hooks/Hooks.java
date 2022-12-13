@@ -20,7 +20,7 @@ Bu da bizim isteyeceğimiz bir durum değildir
 
 Cucumber'da @before @after kullanma ihtiyacımız olursa
 bunu stepDefinitions package'i altında oluşturacağımız
-Hooks class'ına koyarız
+Hooks class'ına koyarız.
 
 
 Biz her scenario'dan sonra test sonucunu kontrol edip failed olan
