@@ -1,6 +1,6 @@
-package stepDefinitions.stepDefinitionsAPI;
+package stepDefinitions.API;
 
-import baseUrl.BaseUrl;
+import base_url_setup.BaseUrl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.*;
 import io.restassured.http.ContentType;

@@ -15,13 +15,6 @@ import org.junit.runner.RunWith;
         glue = {"stepDefinitions","hooks"},
 
 
-
-
-        glue = {"stepDefinitionsUI","hooks"},
-
-
-
-
         tags = "   @api",
 
 

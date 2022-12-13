@@ -48,9 +48,7 @@ scenario'lar için screenshoot olmasi amaciyla
 }
 
 
-    }
-*/
-}
+
 
 
 
