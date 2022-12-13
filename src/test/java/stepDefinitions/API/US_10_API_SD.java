@@ -1,6 +1,6 @@
-package stepDefinitions.stepDefinitionsAPI;
+package stepDefinitions.API;
 
-import baseUrl.BaseUrl;
+import base_url_setup.BaseUrl;
 import io.cucumber.java.en.*;
 import io.restassured.path.json.JsonPath;
 import utilities.ConfigReader;

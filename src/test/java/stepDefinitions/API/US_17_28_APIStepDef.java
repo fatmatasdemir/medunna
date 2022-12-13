@@ -1,6 +1,5 @@
 package stepDefinitions.API;
 
-import base_url_setup.MedunnaBaseUrl;
 import base_url_setup.Medunna_Setup;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;

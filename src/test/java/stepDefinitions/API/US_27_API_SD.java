@@ -1,4 +1,4 @@
-package stepDefinitions.stepDefinitionsAPI;
+package stepDefinitions.API;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,8 +11,8 @@ import pojos.Messages;
 import utilities.ConfigReader;
 import java.io.IOException;
 import java.util.*;
-import static baseUrl.MedunnaBaseUrl.medunnaSetup;
-import static baseUrl.MedunnaBaseUrl.spec;
+import static base_url_setup.MedunnaBaseUrl.medunnaSetup;
+import static base_url_setup.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;

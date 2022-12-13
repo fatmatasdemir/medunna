@@ -9,7 +9,7 @@ import utilities.DatabaseUtility;
 import utilities.Driver;
 import java.io.IOException;
 
-import static baseUrl.MedunnaBaseUrl.medunnaSetup;
+import static base_url_setup.MedunnaBaseUrl.medunnaSetup;
 
 public class Hooks2 {
     //    What is hooks class in cucumber?
