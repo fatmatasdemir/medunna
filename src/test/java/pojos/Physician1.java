@@ -5,19 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Physician1 {
-    /*
-    "createdBy": "team02",
-    "createdDate": "2022-11-24 19:52:46.090547",
-    "id": 330662,
-    "firstName": "doctorfatma",
-    "lastName": "mutsuz",
-    "birthDate": "1988-07-14 22:00:00",
-    "phone": "123-456-7890",
-    "gender": "FEMALE",
-    "bloodGroup": "Apositive",
-    "adress": "",
-    "description": "",
-     */
+
     private String createdBy;
     private String createdDate;
     private int id;
