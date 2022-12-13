@@ -1,28 +1,20 @@
 package utilities;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class DatabaseUtility {
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
-
-
-
     public static void createConnection() {
 //        String url = ConfigurationReader.getProperty("database_url");
 //        String user = ConfigurationReader.getProperty("database_user");
 //        String password = "Techpro_@126";
-
         String url = "jdbc:postgresql://medunna.com:5432/medunna_db";
         String user = "medunna_user";
         String password = "medunna_pass_987";
-
-
         try {
             connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
@@ -30,26 +22,18 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
-
     public static void main(String[] args){
-
         createConnection( "jdbc:postgresql://medunna.com:5432/medunna_db", "medunna_user", "medunna_pass_987");
         String query="select * from jhi_user";
         // List<Object> allData= getColumnData(query,"ssn");
         //  System.out.println(allData);
-
-
         List<String> columnNames=getColumnNames(query); //41--47 tüm datlari almak icin yapilir
-
         System.out.println(columnNames);
-
         for (int i = 0; i < columnNames.size(); i++) {
             List<Object>  allData=getColumnData(query,columnNames.get(i));
             System.out.println(allData);
         }
-
     }
-
     public static void closeConnection() {
         try {
             if (resultSet != null) {
@@ -75,7 +59,6 @@ public class DatabaseUtility {
     public static Object getCellValue(String query) {
         return getQueryResultList(query).get(0).get(0);
     }
-
     public static Object getSecondCellValue(String query) {
         return getQueryResultList(query).get(0).get(1);
     }
@@ -152,7 +135,6 @@ public class DatabaseUtility {
      *         collection of rows and a map represents represent a single row with
      *         key being the column name
      */
-
     public static List<Map<String, Object>> getQueryResultMap(String query) {
         executeQuery(query);
         List<Map<String, Object>> rowList = new ArrayList<>();
@@ -244,8 +226,6 @@ public class DatabaseUtility {
     public static List<Object> getRowListWithParam(String query,int row) {
         return getQueryResultList(query).get(row);
     }
-
-
     public static void createConnection(String url, String user, String password) {
         try {
             connection = DriverManager.getConnection(url, user, password);
@@ -254,8 +234,6 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
-
-
     public static Connection getConnection() {
         String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=crystalkeyhotels2;user=Ahmet_User;password=Ahmet123!";
         String username="Ahmet_User";
@@ -268,7 +246,6 @@ public class DatabaseUtility {
         }
         return connection;
     }
-
     //used to get statement
     public static Statement getStatement() {
         try {
@@ -279,5 +256,4 @@ public class DatabaseUtility {
         }
         return statement;
     }
-
 }
