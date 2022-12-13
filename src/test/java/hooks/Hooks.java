@@ -23,14 +23,18 @@ Cucumber'da @before @after kullanma ihtiyacımız olursa
 
 
 bunu stepDefinitions package'i altında oluşturacağımız
-Hooks class'ına koyarız
+Hooks class'ına koyarız.
 
 
 Biz her scenario'dan sonra test sonucunu kontrol edip failed olan
 scenario'lar için screenshoot olmasi amaciyla
 @After methodu kullanacağız
      */
+
+/*
+
   /*  @After
+
     public void tearDown(Scenario scenario) throws IOException {
         final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
         if (scenario.isFailed()) {
@@ -42,4 +46,11 @@ scenario'lar için screenshoot olmasi amaciyla
         }
     }*/
 }
+
+
+    }
+*/
+}
+
+
 

@@ -4,6 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class State {
+    public State() {
+    }
+
+    public State(int id, String name, Country country) {
+        this.id = id;
+        this.name = name;
+        this.country = country;
+    }
 
     private int id;
     private String name;

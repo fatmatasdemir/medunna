@@ -1,21 +1,29 @@
 package pojos;
-public class RoomPost {
+
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+@JsonIgnoreProperties(ignoreUnknown = true)
+
+
+public class RoomPojoPut {
 
     private String description;
+    private int id;
     private int price;
     private int roomNumber;
     private String roomType;
     private boolean status;
 
-    public RoomPost(String description, int price, int roomNumber, String roomType, boolean status) {
+    public RoomPojoPut() {
+    }
+
+    public RoomPojoPut(String description, int id, int price, int roomNumber, String roomType, boolean status) {
         this.description = description;
+        this.id = id;
         this.price = price;
         this.roomNumber = roomNumber;
         this.roomType = roomType;
         this.status = status;
-    }
-
-    public RoomPost() {
     }
 
     public String getDescription() {
@@ -24,6 +32,14 @@ public class RoomPost {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPrice() {
@@ -60,8 +76,9 @@ public class RoomPost {
 
     @Override
     public String toString() {
-        return "RoomPost{" +
+        return "RoomPut{" +
                 "description='" + description + '\'' +
+                ", id=" + id +
                 ", price=" + price +
                 ", roomNumber=" + roomNumber +
                 ", roomType='" + roomType + '\'' +

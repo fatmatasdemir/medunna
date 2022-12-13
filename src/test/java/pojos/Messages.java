@@ -1,9 +1,7 @@
 package pojos;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
+import com.fasterxml.jackson.annotation.JsonFormat;
+@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
 public class Messages {
 
     private String id;
@@ -13,7 +11,14 @@ public class Messages {
     private String subject;
 
     public Messages() {
+    }
 
+    public Messages(String id, String name, String email, String message, String subject) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.message = message;
+        this.subject = subject;
     }
 
     public String getId() {
@@ -54,5 +59,16 @@ public class Messages {
 
     public void setSubject(String subject) {
         this.subject = subject;
+    }
+
+    @Override
+    public String toString() {
+        return "Messages{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", message='" + message + '\'' +
+                ", subject='" + subject + '\'' +
+                '}';
     }
 }
