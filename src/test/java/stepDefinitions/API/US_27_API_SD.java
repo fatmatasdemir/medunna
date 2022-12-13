@@ -17,7 +17,8 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static utilities.Authentication2.generateToken2;
+import static utilities.Authentication.generateToken;
+import static utilities.Authentication1.generateToken1;
 import static utilities.ReadTxt.returnReadRoomMessages;
 
 public class US_27_API_SD {
@@ -36,7 +37,7 @@ public class US_27_API_SD {
     @When("Admin  post gonderir -send the POST- ve yaniti alir -get the Response-")
     public void admin_post_gonderir_send_the_post_ve_yaniti_alir_get_the_response() {
 
-          response=given().spec(spec).headers("Authorization","Bearer "+generateToken2()).body(expectedMesajPojo).
+          response=given().spec(spec).headers("Authorization","Bearer "+generateToken1()).body(expectedMesajPojo).
           contentType(ContentType.JSON).when().post("/{1}/{2}");
         //  response=given().headers("Authorization","Bearer "+generateToken2()).body(mesaj).
         // contentType(ContentType.JSON).when().post(ConfigReader.getProperty("mesaj_endpoint"));
@@ -53,7 +54,7 @@ public class US_27_API_SD {
     @Given("Admin send the Get data donderir  ve response alir")
     public void admin_send_the_get_data_donderir_ve_response_alir() {
 
-           response=given().headers("Authorization","Bearer "+generateToken2())
+           response=given().headers("Authorization","Bearer "+generateToken())
            .when().get(ConfigReader.getProperty("mesaj_endpoint_withsize"));
             response.prettyPrint();
     }

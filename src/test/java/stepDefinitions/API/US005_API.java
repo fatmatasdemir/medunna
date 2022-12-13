@@ -19,7 +19,7 @@ public class US005_API {
     @Given("Kullanici id numarali hastanin tum bilgilerini get request gonderir")
     public void kullaniciIdNumaraliHastaninTumBilgileriniGetRequestGonderir() {
 
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzA3Njc5MzZ9.4fyGOq5mYCX3SFMkOdDjyyPanNN5aSLOb26NGVSlliFEaZQQtYSpsBKN97qJzHc03qhzpt-ddaShvKaExysdHQ";
+        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzEwNTI3Mjl9.VuoK-xVkpdIyGAOZXuORQYtzX3ELhgeeoYqbeMRylMGAmD4jDf00mGUjeX1YGNNogsKk3P8IZNWtyrBids8CPg";
         response=given().contentType(ContentType.JSON).headers("Authorization","Bearer " + token).
                 when().get("https://medunna.com/api/appointments/353476");
         response.prettyPrint();
