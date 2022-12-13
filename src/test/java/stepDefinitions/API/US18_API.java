@@ -16,7 +16,7 @@ public class US18_API extends base_url {
     public void kullaniciIdLiDoktorVerileriIcinBirGetRequestGonderir(String arg0) {
      spec.pathParams("1","api","2","physicians","3",304931);
 
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzA3Njc5MzZ9.4fyGOq5mYCX3SFMkOdDjyyPanNN5aSLOb26NGVSlliFEaZQQtYSpsBKN97qJzHc03qhzpt-ddaShvKaExysdHQ";
+        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzEwMTg4NzJ9.qyJ0QHocmT2YoFyLxrzx75fkISEF982cFBSv5M80IFSmnAAQhksNktN7RBTq2UqTPIbWuHbpmkzzcl8p6oXP2Q";
 
         response=given().spec(spec).headers("Authorization","Bearer " + token).
                 when().get("/{1}/{2}/{3}");
