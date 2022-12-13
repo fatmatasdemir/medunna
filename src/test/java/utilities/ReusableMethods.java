@@ -1,21 +1,24 @@
 package utilities;
 
-import org.apache.commons.io.FileUtils;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import org.apache.commons.io.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
+
+import static io.restassured.RestAssured.given;
 
 public class ReusableMethods {
 
@@ -167,6 +170,25 @@ public class ReusableMethods {
 
         return element;
     }
+/*
+    public static String generateToken() {
+        String username = "Batch81";
+        String password = "Batch81+";
 
+        Map<String, Object> map = new HashMap<>();
+        map.put("username", username);
+        map.put("password",password);
+        map.put("rememberme","true");
+
+        String endPoint = "https://www.medunna.com/api/authenticate";
+
+        Response response1 = given().contentType(ContentType.JSON).body(map).when().post(endPoint);
+
+        JsonPath token = response1.jsonPath();
+
+        return token.getString("id_token");
+    }
+
+ */
 
 }
