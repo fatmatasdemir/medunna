@@ -35,6 +35,7 @@ public class US005_API {
 
     @And("Kullanici bilgilerin dogrulugunu kontrol eder")
     public void kullaniciBilgilerinDogrulugunuKontrolEder() {
+        //Json ile
 
         JsonPath json=response.jsonPath();
         Assert.assertEquals(353476,json.getInt("id"));
