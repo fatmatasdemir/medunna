@@ -11,10 +11,10 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml" },
 
         features = "src/test/resources",
-        glue = {"stepDefinitions","hooks"},
-        tags = "   @api"
+        glue = {"stepDefinitionsUI","hooks"},
 
-
+        tags = "@US19_20_21",
+        dryRun = false
 )
 
 
@@ -28,14 +28,13 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml" },
         features = "src/test/resources/features",
-        glue = "stepDefinitionsUI.stepDefinitions",
+        glue = "stepDefinitions",
         tags = "@us005tc01",
         dryRun = false
-
 )*/
 
 
 
-        public class TestRunner1 {
+public class TestRunner1 {
 
 }
