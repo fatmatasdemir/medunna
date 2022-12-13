@@ -6,7 +6,7 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     Given kullanıcı "medunnaUrl" sayfasına gider
     And  kullanıcı anasayfadaki Make an Appointment butonuna tıklar
     Then 1 saniye bekler
-     And kullanıcı bir "<FirstName>" yazar ve bu alanı boş bırakamaz
+    And kullanıcı bir "<FirstName>" yazar ve bu alanı boş bırakamaz
     Then 1 saniye bekler
     And kullanıcı sayfayı kapatır
 
@@ -142,6 +142,4 @@ Feature: US05 Hastalar (patients), hastahaneden randevu (Appointment) oluşturab
     Examples:
       |firstName| SSNN| lastName|email| phoneNumber|
       |Vuslat |646-12-1240| Candemir|team02@gmail.com|8522739871|
-
-
 

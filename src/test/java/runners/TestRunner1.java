@@ -12,10 +12,17 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources",
 
+
+
+
         glue = {"stepDefinitionsUI","hooks"},
+
+
 
         tags = "   @api",
 
+
+        
         dryRun = false
 )
 
@@ -33,11 +40,10 @@ import org.junit.runner.RunWith;
         glue = "stepDefinitions",
         tags = "@us005tc01",
         dryRun = false
-
 )*/
 
 
 
-        public class TestRunner1 {
+public class TestRunner1 {
 
 }
