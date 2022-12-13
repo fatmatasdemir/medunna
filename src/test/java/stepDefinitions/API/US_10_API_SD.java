@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertTrue;
-import static utilities.Authentication2.generateToken2;
+import static utilities.Authentication.generateToken;
 
 
-    public class US_10_API_SD extends BaseUrl {
+public class US_10_API_SD extends BaseUrl {
 
 
 
@@ -24,7 +24,7 @@ import static utilities.Authentication2.generateToken2;
         @Then("Kullanici  GET Request to the URL gonderir")
         public void kullaniciGETRequestToTheURLGonderir() {
     //  response=given().spec(spec).headers("Authorization","Bearer "+generateToken2()).when().get("/{1}/{2}");
-            response=given().headers("Authorization","Bearer "+generateToken2()).when()
+            response=given().headers("Authorization","Bearer "+generateToken()).when()
             .get(ConfigReader.getProperty("api_appointments"));
           //  response.prettyPrint();
 

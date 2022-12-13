@@ -1,4 +1,4 @@
-package hooks;
+/*package hooks;
 
 
 import io.cucumber.java.After;
@@ -63,4 +63,4 @@ public class Hooks2 {
 //        }
     }
 }
-
+*/

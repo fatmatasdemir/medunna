@@ -1,6 +1,7 @@
 package stepDefinitions.API;
 
-import base_url_setup.base_url;
+
+import base_url_setup.BaseUrl;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
@@ -9,14 +10,14 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 
-public class US18_API extends base_url {
+public class US18_API extends BaseUrl {
 
 
     @Given("Kullanici {string} id'li doktor verileri icin bir get request gonderir")
     public void kullaniciIdLiDoktorVerileriIcinBirGetRequestGonderir(String arg0) {
      spec.pathParams("1","api","2","physicians","3",304931);
 
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzEwMTg4NzJ9.qyJ0QHocmT2YoFyLxrzx75fkISEF982cFBSv5M80IFSmnAAQhksNktN7RBTq2UqTPIbWuHbpmkzzcl8p6oXP2Q";
+        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzEwNTI1MTd9.D9GwZxrCvctwN4wbrLiEyPajZrQneJhTa8sXVwpj8nK3u3Xdhoafls5dXvNODqnVd9JE-YqFI8ON__owlSDB9w";
 
         response=given().spec(spec).headers("Authorization","Bearer " + token).
                 when().get("/{1}/{2}/{3}");

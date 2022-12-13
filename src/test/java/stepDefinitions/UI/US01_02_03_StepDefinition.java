@@ -2,12 +2,12 @@ package stepDefinitions.UI;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
-import pages.US01_02_03_Page;
+
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US01_02_03_StepDefinition {
-
+/*
       US01_02_03_Page object =new US01_02_03_Page();
 
     @Given("User goes to Medunna url")
@@ -62,5 +62,5 @@ public class US01_02_03_StepDefinition {
     @And("User sees your SSN is invalid")
     public void userSeesYourSSNIsInvalid() {
 
-    }
+    }*/
 }
