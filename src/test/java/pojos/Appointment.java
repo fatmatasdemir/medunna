@@ -23,6 +23,8 @@ public class Appointment {
         this.date = date;
     }
 
+
+
     public String getFirstname() {
         return firstname;
     }

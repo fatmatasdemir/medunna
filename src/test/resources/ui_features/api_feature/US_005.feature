@@ -1,4 +1,4 @@
-Feature: API test
+Feature: US_005 Api ile randevu bilgileri dogrulama
   @api
   Scenario: Kullanıcı APİ ile randevu bilgilerini dogrulamalidir
 

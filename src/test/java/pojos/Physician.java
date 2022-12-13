@@ -83,4 +83,5 @@ public class Physician {
                 ", speciality='" + speciality + '\'' +
                 '}';
     }
+
 }
