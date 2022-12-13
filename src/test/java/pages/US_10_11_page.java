@@ -80,8 +80,6 @@ public class US_10_11_page {
     @FindBy(id = "appointment-diagnosis")
     public WebElement diagnosis;
 
-
-
     @FindBy(id= "save-entity")
     public WebElement save;
 

@@ -1,10 +1,9 @@
-package stepDefinitionsUI;
+package stepDefinitions.stepDefinitionsUI;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.US04_08_09_Pages;
 import utilities.ConfigReader;

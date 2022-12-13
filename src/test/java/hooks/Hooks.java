@@ -28,7 +28,7 @@ scenario'lar için screenshoot olmasi amaciyla
 @After methodu kullanacağız
 
      */
-
+/*
     @After
     public void tearDown(Scenario scenario) throws IOException {
         final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -42,4 +42,7 @@ scenario'lar için screenshoot olmasi amaciyla
         }
 
     }
+*/
 }
+
+

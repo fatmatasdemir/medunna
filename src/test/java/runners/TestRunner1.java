@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml" },
 
         features = "src/test/resources",
-        glue = {"stepDefinitionsUI","hooks"},
+        glue = {"stepDefinitions","hooks"},
 
        tags = " @tc001",
 

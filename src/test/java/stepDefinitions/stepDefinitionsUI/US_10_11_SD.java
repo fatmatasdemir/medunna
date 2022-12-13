@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.stepDefinitionsUI;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -30,6 +30,9 @@ public class US_10_11_SD {
     @Given("Doctor {string} anasayfasina gider")
     public void doctorAnasayfasinaGider(String anasayfa) {
         Driver.getDriver().get(ConfigReader.getProperty(anasayfa));
+
+
+
 
     }
 
@@ -93,7 +96,7 @@ public class US_10_11_SD {
 
         System.out.println(randevulistStr);
 
-        assertTrue(randevulistStr.get(0).contains("304443"));
+        assertTrue(randevulistStr.get(0).contains("10439"));
 
 
         for (WebElement w : randevulistesisatiri) {
@@ -102,7 +105,7 @@ public class US_10_11_SD {
 
         }
         System.out.println(randevulistesisatiriStr.get(0));
-        System.out.println(randevulistesisatiriStr.get(1));
+
 
 
     }
@@ -299,12 +302,12 @@ public class US_10_11_SD {
 
     @And("Doktor  treatment {string} alanini doldurur")
     public void doktorTreatmentAlaniniDoldurur(String treatment) {
-        page.anamnesis.sendKeys(treatment);
+        page.treatment.sendKeys(treatment);
     }
 
     @And("Doktor  diagnosis {string} doldurur")
     public void doktorDiagnosisDoldurur(String diagnosis) {
-        page.anamnesis.sendKeys(diagnosis);
+        page.diagnosis.sendKeys(diagnosis);
     }
 
     @And("Doktor  prescription {string} alanini doldurur")
@@ -315,7 +318,7 @@ public class US_10_11_SD {
 
     @And("Doktor  description {string} alanini  doldurur")
     public void doktorDescriptionAlaniniDoldurur(String description) {
-        page.prescription.sendKeys(description);
+        page.description.sendKeys(description);
     }
 
     @And("Assert edilir")
@@ -384,7 +387,8 @@ public class US_10_11_SD {
 
         }
 
-    }
+
+}
 
 
 

@@ -1,5 +1,6 @@
 package pojos;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -32,36 +33,36 @@ public class Physician {
         this.id = id;
     }
 
-    public String getFirstname() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstName = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastName = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getSSN() {
+    public String getSsn() {
         return ssn;
     }
 
-    public void setSSN(String SSN) {
-        this.ssn= SSN;
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
     }
 
-    public String getExamfee() {
+    public String getExamFee() {
         return examFee;
     }
 
-    public void setExamfee(String examfee) {
-        this.examFee = examfee;
+    public void setExamFee(String examFee) {
+        this.examFee = examFee;
     }
 
     public String getSpeciality() {
@@ -74,12 +75,12 @@ public class Physician {
 
     @Override
     public String toString() {
-        return "PhysicianApiPojo{" +
-                "id='" + id + '\'' +
-                ", firstname='" + firstName + '\'' +
-                ", lastname='" + lastName + '\'' +
-                ", SSN='" + ssn + '\'' +
-                ", examfee='" + examFee + '\'' +
+        return "physician{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", ssn='" + ssn + '\'' +
+                ", examFee='" + examFee + '\'' +
                 ", speciality='" + speciality + '\'' +
                 '}';
     }
