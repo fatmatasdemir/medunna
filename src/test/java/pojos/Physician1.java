@@ -1,16 +1,10 @@
 package pojos;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Patient {
-
+public class Physician1 {
 
     private String createdBy;
     private String createdDate;
@@ -21,17 +15,36 @@ public class Patient {
     private String phone;
     private String gender;
     private String bloodGroup;
-    private String adress;
-    private String email;
-    private String description;
 
-   // private User user;
+    @Override
+    public String toString() {
+        return "Physicians{" +
+                "createdBy='" + createdBy + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", phone='" + phone + '\'' +
+                ", gender='" + gender + '\'' +
+                ", bloodGroup='" + bloodGroup + '\'' +
+                '}';
+    }
 
+    public Physician1() {
+    }
 
-
-   // public User getUser() {return user;}
-
-  //  public void setUser(User user) {this.user = user;}
+    public Physician1(String createdBy, String createdDate, int id, String firstName, String lastName, String birthDate, String phone, String gender, String bloodGroup) {
+        this.createdBy = createdBy;
+        this.createdDate = createdDate;
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.phone = phone;
+        this.gender = gender;
+        this.bloodGroup = bloodGroup;
+    }
 
     public String getCreatedBy() {
         return createdBy;
@@ -103,29 +116,5 @@ public class Patient {
 
     public void setBloodGroup(String bloodGroup) {
         this.bloodGroup = bloodGroup;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 }
