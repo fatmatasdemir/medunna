@@ -29,7 +29,7 @@ public class US05_06_07_StepDefinition {
 
  @Given("kullanıcı {string} sayfasına gider")
  public void kullanıcıSayfasınaGider(String arg0) {
-//driver/////
+//driver//////
   Driver.getDriver().get(ConfigReader.getProperty("medunna_login_url"));
  }
 
