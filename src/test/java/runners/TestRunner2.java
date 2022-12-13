@@ -9,8 +9,13 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber2.json",
                 "junit:target/xml-report/cucumber2.xml" },
         features = "src/test/resources",
+
         glue = {"stepDefinitionsUI","Hooks"},
         tags = "q",
+
+        glue = {"stepDefinitions","hooks"},
+        tags = "@api18",
+
         dryRun = false
 
 )
