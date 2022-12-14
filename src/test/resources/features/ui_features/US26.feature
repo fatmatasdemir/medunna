@@ -33,13 +33,13 @@ Feature: US26  İletişim Mesajı (Contact messages)
     Given Kullanici "medunnaUrl" adresine gider
     Then kullanici 1 saniye bekler
     Then Contect butonuna tiklar
-    And  Name bölümünü bos birakir
+    And  Name bolumunu bos birakir
     Then kullanici 3 saniye bekler
-    And  Email bölümünü  bos birakir
+    And  Email bolumunu bos birakir
     Then kullanici 3 saniye bekler
-    And  Subject bölümünü bos birakir
+    And  Subject bolumunu bos birakir
     Then kullanici 3 saniye bekler
-    Then Message bölümünü bos birakir
+    Then Message bolumunu bos birakir
     Then kullanici 3 saniye bekler
     And Name is required yazisini görür
     And Your email is required yazisini görür

@@ -49,5 +49,6 @@ public class US18_API extends BaseUrl {
                    ,"bloodGroup",equalTo("Onegative")
                    );
 
+
     }
 }

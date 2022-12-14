@@ -134,19 +134,19 @@ public class US26_StepDefinitions {
     }
 
 
-    @And("Name bölümünü bos birakir")
-    public void nameBölümünüBosBirakir() {
+    @And("Name bolumunu bos birakir")
+    public void nameBolumunuBosBirakir() {
         page.mesajName.sendKeys(" ");
     }
 
-    @And("Email bölümünü  bos birakir")
-    public void emailBölümünüBosBirakir() {
+    @And("Email bolumunu bos birakir")
+    public void emailBolumunuBosBirakir() {
         page.mesajEmail.sendKeys(" ");
         actions.sendKeys(Keys.TAB).perform();
     }
 
-    @And("Subject bölümünü bos birakir")
-    public void subjectBölümünüBosBirakir() {
+    @And("Subject bolumunu bos birakir")
+    public void subjectBolumunuBosBirakir() {
         page.mesajSubject.sendKeys(" ");
      actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB);
        // actions.sendKeys(Keys.TAB).perform();
@@ -171,8 +171,8 @@ public class US26_StepDefinitions {
         assertTrue(page.ThisFieldIsRequired.isDisplayed());
     }
 
-    @Then("Message bölümünü bos birakir")
-    public void message_bölümünü_bos_birakir() {
+    @Then("Message bolumunu bos birakir")
+    public void message_bolumunu_bos_birakir() {
        page.mesaj.sendKeys(" ");
     }
 
