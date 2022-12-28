@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
 
 )
 public class Runner {
-    /*
+    /* //
      Runner Class'ı TestNG'deki XMl mantığı ile çalışır. Çalıştırmak istediğimiz senartolara tag belirtiriz
     ve belirttiğimiz tag'ları çalıştırır. XMl deki gibi istediğimiz testleri çalıştırmak için kullanırız.
     Runner class body'si boştur ve runner class'ını ekleyeceğimiz notasyonlar aktive eder.
